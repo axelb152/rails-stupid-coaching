@@ -1,0 +1,14 @@
+<h2>Stupid Coaching</h2>
+<br>
+<div class = "q-and-a-cards">
+  <p><%= @questions %></p>
+  <p><em>-You</em></p>
+</div>
+
+<br>
+<div class = "q-and-a-cards bg-warning bg-gradient">
+  <p><%= @answers %></p>
+  <p><em>-Your Coach</em></p>
+</div>
+<br>
+<%= link_to "Ask a new question", ask_path %>
