@@ -7,12 +7,12 @@ class QuestionsController < ApplicationController
   def answer
     @questions = params[:question]
 
-    if params[:question] == 'I am going to work'
-      @answers = 'Great!'
-    elsif params[:question].ends_with?('?')
-      @answers = 'Silly question, get dressed and go to work!'
-    else
-      @answers = "I don't care, get dressed and go to work!"
-    end
+    @answers = if params[:question] == 'I am going to work'
+                 'Great!'
+               elsif params[:question].ends_with?('?')
+                 'Silly question, get dressed and go to work!'
+               else
+                 "I don't care, get dressed and go to work!"
+               end
   end
 end
